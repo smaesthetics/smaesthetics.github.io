@@ -601,14 +601,15 @@
                     }
                 });
             });
-  const container = document.getElementById('inventory-container');
+const inventoryContainer = document.getElementById('inventory-container');
+
 
   fetch('https://script.google.com/macros/s/AKfycbzMljC_C9ZmUODjXXWT8tCaujWBmbiTzDwD6hhu1HGH-IEC8SwYBTCCB-e_Rv_BWD9a/exec?action=getInventory')
     .then(response => response.json())
     .then(items => {
       const availableItems = items.filter(item => item.status === 'Available');
       if (availableItems.length === 0) {
-        container.innerHTML = '<p>No items currently available.</p>';
+         inventoryContainer.innerHTML = '<p>No items currently available.</p>';
         return;
       }
 
@@ -623,21 +624,21 @@
       `).join('');
     })
     .catch(err => {
-      container.innerHTML = '<p>Failed to load inventory. Please try again later.</p>';
+       inventoryContainer.innerHTML = '<p>Failed to load inventory. Please try again later.</p>';
       console.error('Inventory load error:', err);
     });
-            const container = document.getElementById('inventory-container');
+            const container = document.getElementById('inventory- inventoryContainer');
 
 fetch('https://script.google.com/macros/s/your-real-script-id/exec?action=getInventory')
   .then(response => response.json())
   .then(items => {
     const availableItems = items.filter(item => item.status === 'Available');
     if (availableItems.length === 0) {
-      container.innerHTML = '<p class="text-center text-gray-500 italic">No items currently available.</p>';
+       inventoryContainer.innerHTML = '<p class="text-center text-gray-500 italic">No items currently available.</p>';
       return;
     }
 
-    container.innerHTML = availableItems.map(item => `
+     inventoryContainer.innerHTML = availableItems.map(item => `
       <div
         class="bg-keywest-sand border border-keywest-sand rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl"
       >
@@ -667,7 +668,7 @@ fetch('https://script.google.com/macros/s/your-real-script-id/exec?action=getInv
     `).join('');
   })
   .catch(err => {
-    container.innerHTML = '<p class="text-center text-red-500 font-semibold">Failed to load inventory. Please try again later.</p>';
+     inventoryContainer.innerHTML = '<p class="text-center text-red-500 font-semibold">Failed to load inventory. Please try again later.</p>';
     console.error('Inventory load error:', err);
   });
 
