@@ -58,24 +58,15 @@
             .rotate-180 {
                 transform: rotate(180deg);
             }
-            .product-card {
-  background-color: #f5f0e6; /* example: keywest sand */
-  border: 1px solid #d4c9b8;
-  border-radius: 0.75rem;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+            /* Optional: smoother scaling and shadows for product cards */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .product-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
-.product-image {
-  width: 100%;
-  height: 16rem;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 0.75rem;
-}
+
 
         </style>
     </head>
@@ -635,6 +626,51 @@
       container.innerHTML = '<p>Failed to load inventory. Please try again later.</p>';
       console.error('Inventory load error:', err);
     });
+            const container = document.getElementById('inventory-container');
+
+fetch('https://script.google.com/macros/s/your-real-script-id/exec?action=getInventory')
+  .then(response => response.json())
+  .then(items => {
+    const availableItems = items.filter(item => item.status === 'Available');
+    if (availableItems.length === 0) {
+      container.innerHTML = '<p class="text-center text-gray-500 italic">No items currently available.</p>';
+      return;
+    }
+
+    container.innerHTML = availableItems.map(item => `
+      <div
+        class="bg-keywest-sand border border-keywest-sand rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+      >
+        <img
+          src="${item.imageUrl || 'https://via.placeholder.com/400x300?text=No+Image'}"
+          alt="${item.name}"
+          class="w-full h-64 object-cover rounded-t-xl"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold text-keywest-darkblue playfair-display mb-2">${item.name}</h3>
+          <p class="text-gray-700 mb-4">${item.description || ''}</p>
+          <p class="text-keywest-coral font-bold text-xl mb-1">$${item.price.toFixed(2)}</p>
+          <p class="text-sm text-keywest-blue uppercase tracking-wide mb-4">${item.category}</p>
+          ${item.paypalLink ? `
+            <a href="${item.paypalLink}" target="_blank" rel="noopener" 
+               class="inline-flex items-center bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm">
+               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"/>
+                 <path d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"/>
+               </svg>
+               Buy Now
+            </a>
+          ` : ''}
+        </div>
+      </div>
+    `).join('');
+  })
+  .catch(err => {
+    container.innerHTML = '<p class="text-center text-red-500 font-semibold">Failed to load inventory. Please try again later.</p>';
+    console.error('Inventory load error:', err);
+  });
+
 </script>
     </body>
 </html>
