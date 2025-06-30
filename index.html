@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Southernmost Aesthetics</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+            rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+            }
+            .playfair-display {
+                font-family: "Playfair Display", serif;
+            }
+            .carousel-item {
+                display: none;
+            }
+            .carousel-item.active {
+                display: block;
+            }
+            .bg-keywest-blue {
+                background-color: #00a0ad;
+            }
+            .text-keywest-coral {
+                color: #ff6b6b;
+            }
+            .border-keywest-sand {
+                border-color: #f0e68c;
+            }
+            .bg-keywest-sand {
+                background-color: #f0e68c;
+            }
+            .text-keywest-yellow {
+                color: #ffd700;
+            }
+            .text-keywest-darkblue {
+                color: #003366;
+            }
+            .bg-keywest-red {
+                background-color: #d92e2e;
+            }
+            .bg-paypal-blue {
+                background-color: #0070ba;
+            }
+            .hover\:bg-paypal-darkblue:hover {
+                background-color: #005ea6;
+            }
+            .max-h-0 {
+                max-height: 0;
+            }
+            .max-h-screen {
+                max-height: 100vh;
+            }
+            .rotate-180 {
+                transform: rotate(180deg);
+            }
+        </style>
+    </head>
+    <body class="bg-slate-50">
+        <header class="bg-sky-100 shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <span class="material-icons text-keywest-coral text-3xl mr-2">beach_access</span>
+                    <h1 class="text-3xl font-bold text-keywest-darkblue playfair-display">Southernmost Aesthetics</h1>
+                </div>
+                <a
+                    class="bg-keywest-blue hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+                    href="#products">
+                    Products
+                </a>
+                <a
+                    class="bg-keywest-red hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+                    href="#contact">
+                    Contact
+                </a>
+            </div>
+        </header>
+        <main class="container mx-auto px-6 py-12">
+            <section class="mb-16 rounded-lg shadow-xl overflow-hidden border-4 border-keywest-sand" id="carousel">
+                <div class="relative h-[60vh] md:h-[75vh]">
+                    <div class="carousel-item active w-full h-full">
+                        <img
+                            alt="Beautifully crafted seashell necklace on a sandy beach background"
+                            class="w-full h-full object-cover"
+                            src="images/sm-f-1.jpg" />
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <h2 class="text-4xl md:text-5xl text-white font-bold playfair-display text-center px-4">
+                                Home Decor From The Shore
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item w-full h-full">
+                        <img
+                            alt="Handmade soaps with ocean scents displayed on driftwood"
+                            class="w-full h-full object-cover"
+                            src="images/Screenshot%202025-06-24%20074527.png" />
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <h2 class="text-4xl md:text-5xl text-white font-bold playfair-display text-center px-4">
+                                A Gft For Everyone
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item w-full h-full">
+                        <img
+                            alt="Key West inspired home decor item, like a painted buoy or driftwood art"
+                            class="w-full h-full object-cover"
+                            src="images/Screenshot%202025-06-24%20074506.png" />
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <h2 class="text-4xl md:text-5xl text-white font-bold playfair-display text-center px-4">
+                                Discover Unique Treasures
+                            </h2>
+                        </div>
+                    </div>
+                    <button
+                        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 text-keywest-darkblue p-3 rounded-full shadow-lg"
+                        id="prevBtn">
+                        <span class="material-icons">arrow_back_ios</span>
+                    </button>
+                    <button
+                        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 text-keywest-darkblue p-3 rounded-full shadow-lg"
+                        id="nextBtn">
+                        <span class="material-icons">arrow_forward_ios</span>
+                    </button>
+                    <div
+                        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
+                        id="indicators"></div>
+                </div>
+            </section>
+            <section class="mb-16" id="products">
+                <div class="bg-sky-50 p-8 md:p-12 rounded-xl shadow-xl border border-sky-200">
+                    <h2 class="text-3xl md:text-4xl font-bold text-keywest-darkblue playfair-display mb-10 text-center">
+                        Our Featured Products
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
+                            <div class="relative">
+                                <img
+                                    alt="Artisanal Conch Shell Earrings"
+                                    class="w-full h-64 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwWJkR0uG-W_10kM_Hq5j9E1Q0pBwO8kYx5l9I1iZf2fX_l_m-Y2e8nN9c0vS_C8a8rY6oWlP0bF3_P3jB-c_X_i_A2mRzY5mU5_tT_p_Y0nJ6_V1uX7_E1eG_jY6nZ9qX" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <span
+                                        class="text-xs bg-keywest-coral text-white font-semibold py-1 px-2 rounded-full uppercase tracking-wider"
+                                        >New Arrival</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
+                                    Conch Shell Earrings
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-3">
+                                    Handcrafted sterling silver earrings featuring delicate conch shell charms.
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-2xl font-bold text-keywest-coral">$45.00</p>
+                                    <button
+                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
+                                        <svg
+                                            class="w-5 h-5 mr-1"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
+                                            <path
+                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
+                                        </svg>
+                                        Paypal Pay Link
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
+                            <div class="relative">
+                                <img
+                                    alt="Key Lime Scented Candle"
+                                    class="w-full h-64 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4mG0tD8eE9kF9lJ1zF_jI_kO7pQ-V5sR2xN2uJ6pL_aW_uG-jY0wM1nB_i_P7a_Q_rX9zL_kF_oW_xR_eJ_qZ_bH_uK_aO_gU_tP_jE_nK_lX_oT_sY7_C_rP_wN_qU" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
+                                    Key Lime Breeze Candle
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-3">
+                                    Soy wax candle with the refreshing scent of Key West key limes.
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-2xl font-bold text-keywest-coral">$28.00</p>
+                                    <button
+                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
+                                        <svg
+                                            class="w-5 h-5 mr-1"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
+                                            <path
+                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
+                                        </svg>
+                                        Paypal Pay Link
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
+                            <div class="relative">
+                                <img
+                                    alt="Sunset Over Mallory Square Print"
+                                    class="w-full h-64 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVg_oN_X_P_R_T_Y_U_K_M_J_A_F_E_D_C_B_A_zX_yW_vU_tS_rQ_p_O_n_M_l_K_j_I_h_G_f_E_d_C_b_A_zY_xW_v_U_tS_r_Q_p_O_n_M_l_K_j_I_h_G_f_E_d_C_b_A" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
+                                <div class="absolute top-0 right-0 m-3">
+                                    <span
+                                        class="text-xs bg-keywest-yellow text-keywest-darkblue font-semibold py-1 px-2 rounded-full uppercase tracking-wider"
+                                        >Best Seller</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
+                                    Mallory Square Sunset Print
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-3">
+                                    Vibrant art print capturing the iconic Key West sunset celebration.
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-2xl font-bold text-keywest-coral">$55.00</p>
+                                    <button
+                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
+                                        <svg
+                                            class="w-5 h-5 mr-1"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
+                                            <path
+                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
+                                        </svg>
+                                        Paypal Pay Link
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <button
+                            class="bg-keywest-blue hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg inline-flex items-center"
+                            id="showMoreBtn">
+                            Show More Products
+                            <span class="material-icons ml-2 transition-transform duration-300" id="expandIcon"
+                                >expand_more</span
+                            >
+                        </button>
+                    </div>
+                    <div
+                        class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-h-0 overflow-hidden transition-max-height duration-700 ease-in-out"
+                        id="moreProducts">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
+                            <div class="relative">
+                                <img
+                                    alt="Tropical Print Scarf"
+                                    class="w-full h-64 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZuB-k2Lw2g-09wHq7M8c_0_x_z_Y_X_W_V_U_T_S_R_Q_P_O_N_M_L_K_J_I_H_G_F_E_D_C_B_A_0_1_2_3_4_5_6_7_8_9" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
+                                    Tropical Paradise Scarf
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-3">
+                                    Lightweight scarf with vibrant Key West floral patterns.
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-2xl font-bold text-keywest-coral">$32.00</p>
+                                    <button
+                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
+                                        <svg
+                                            class="w-5 h-5 mr-1"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
+                                            <path
+                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
+                                        </svg>
+                                        Paypal Pay Link
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
+                            <div class="relative">
+                                <img
+                                    alt="Driftwood Picture Frame"
+                                    class="w-full h-64 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiL-9b5Z7c_G_k_N_l_M_o_P_q_R_s_T_u_V_w_X_y_Z_a_B_c_D_e_F_g_H_i_J_k_L_m_N_o_P_q_R_s_T_u_V_w_X_y_Z_a_B_c_D_e_F_g_H_i_J_k_L_m_N" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
+                                    Coastal Driftwood Frame
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-3">
+                                    Rustic picture frame made from reclaimed Key West driftwood.
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-2xl font-bold text-keywest-coral">$38.00</p>
+                                    <button
+                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
+                                        <svg
+                                            class="w-5 h-5 mr-1"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
+                                            <path
+                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
+                                        </svg>
+                                        Paypal Pay Link
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
+                            <div class="relative">
+                                <img
+                                    alt="Seaglass Wind Chime"
+                                    class="w-full h-64 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEu2F3H4G5I6J7K8L9M0N1O2P3Q4R5S6T7U8V9W0X_Y_Z_A_B_C_D_E_F_G_H_I_J_K_L_M_N_O_P_Q_R_S_T_U_V_W_X_Y_Z_a_b_c_d_e_f" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
+                                    Ocean Whisper Wind Chime
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-3">
+                                    Handmade wind chime with colorful Key West seaglass pieces.
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-2xl font-bold text-keywest-coral">$42.00</p>
+                                    <button
+                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
+                                        <svg
+                                            class="w-5 h-5 mr-1"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
+                                            <path
+                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
+                                        </svg>
+                                        Paypal Pay Link
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-16" id="about">
+                <div
+                    class="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-slate-200 flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-keywest-darkblue playfair-display mb-6">
+                            About Southernmost Aesthetics
+                        </h2>
+                        <p class="text-slate-700 text-lg leading-relaxed mb-4">
+                            What began as a seaside love affair with handmade jewelry has drifted into custom home
+                            décor—where coastal charm meets everyday magic. From dainty pieces you can wear to accents
+                            that warm your space, everything is crafted with heart, salt air, and a splash of sparkle.
+                        </p>
+                        <p class="text-slate-700 text-lg leading-relaxed mb-4">
+                            Inspired by the vibrant colors, laid-back charm, and natural beauty of Key West,
+                            Southernmost Aesthetics brings you a curated collection of handcrafted goods and unique
+                            finds. We capture the spirit of the island, from its iconic Southernmost Point to its
+                            sun-drenched beaches and captivating sunsets.
+                        </p>
+                        <p class="text-slate-700 text-lg leading-relaxed mb-6">
+                            Our products are designed to evoke the serene and joyful feeling of a coastal escape.
+                            Whether you're looking for a special gift, a piece of art to adorn your home, or a little
+                            something to remind you of paradise, you'll find it here.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img
+                            alt="Photograph of the Southernmost Point buoy"
+                            class="rounded-lg shadow-md max-w-sm w-full"
+                            src="images/Southernmost_Point_Whitehead_Street_77b26da739.jpg" />
+                    </div>
+                </div>
+            </section>
+            <section class="text-center mb-16 py-10 bg-keywest-blue rounded-xl shadow-lg" id="social">
+                <h3 class="text-2xl font-semibold text-white mb-6">Connect With Us</h3>
+                <div class="flex justify-center space-x-6">
+                    <a class="text-white hover:text-keywest-yellow transition duration-300" href="#">
+                        <svg aria-hidden="true" class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                clip-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a class="text-white hover:text-keywest-yellow transition duration-300" href="#">
+                        <svg aria-hidden="true" class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                clip-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.028 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zm0 1.623c-2.387 0-2.71.01-3.66.056a3.267 3.267 0 00-1.89.693 3.267 3.267 0 00-.693 1.89c-.046.95-.056 1.273-.056 3.66s.01 2.71.056 3.66c.046.715.246 1.305.693 1.89a3.267 3.267 0 001.89.693c.95.046 1.273.056 3.66.056s2.71-.01 3.66-.056a3.267 3.267 0 001.89-.693 3.267 3.267 0 00.693-1.89c.046-.95.056-1.273.056-3.66s-.01-2.71-.056-3.66a3.267 3.267 0 00-.693-1.89 3.267 3.267 0 00-1.89-.693c-.95-.046-1.273-.056-3.66-.056zM12 6.838a5.162 5.162 0 100 10.324 5.162 5.162 0 000-10.324zM12 15a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </div>
+            </section>
+            <section class="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-slate-200" id="contact">
+                <h2 class="text-3xl md:text-4xl font-bold text-keywest-darkblue playfair-display mb-8 text-center">
+                    Get In Touch
+                </h2>
+                <form class="max-w-xl mx-auto space-y-6">
+                    <div>
+                        <label class="block text-slate-700 font-medium mb-2" for="name">Full Name</label>
+                        <input
+                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-keywest-coral focus:border-keywest-coral outline-none transition duration-200"
+                            id="name"
+                            name="name"
+                            placeholder="Your Name"
+                            type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-slate-700 font-medium mb-2" for="email">Email Address</label>
+                        <input
+                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-keywest-coral focus:border-keywest-coral outline-none transition duration-200"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            type="email" />
+                    </div>
+                    <div>
+                        <label class="block text-slate-700 font-medium mb-2" for="message">Message</label>
+                        <textarea
+                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-keywest-coral focus:border-keywest-coral outline-none transition duration-200"
+                            id="message"
+                            name="message"
+                            placeholder="Your message..."
+                            rows="5"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button
+                            class="bg-keywest-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+                            type="submit">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer class="bg-keywest-blue text-sky-100 py-8 text-center">
+            <div class="container mx-auto px-6">
+                <p>© 2025 Southernmost Aesthetics. All Rights Reserved.</p>
+                <p class="text-sm mt-3">Inspired by the beautiful Florida Keys.</p>
+            </div>
+        </footer>
+        <script>
+            const carouselItems = document.querySelectorAll(".carousel-item");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            const indicatorsContainer = document.getElementById("indicators");
+            let currentIndex = 0;
+            let intervalId;
+            function updateCarousel() {
+                carouselItems.forEach((item, index) => {
+                    item.classList.remove("active");
+                    if (index === currentIndex) {
+                        item.classList.add("active");
+                    }
+                });
+                updateIndicators();
+            }
+            function updateIndicators() {
+                const indicators = indicatorsContainer.querySelectorAll("button");
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add("bg-keywest-coral");
+                        indicator.classList.remove("bg-white", "bg-opacity-50");
+                    } else {
+                        indicator.classList.remove("bg-keywest-coral");
+                        indicator.classList.add("bg-white", "bg-opacity-50");
+                    }
+                });
+            }
+            function createIndicators() {
+                carouselItems.forEach((_, index) => {
+                    const button = document.createElement("button");
+                    button.classList.add("w-3", "h-3", "rounded-full", "transition-colors", "duration-300");
+                    if (index === 0) {
+                        button.classList.add("bg-keywest-coral");
+                    } else {
+                        button.classList.add("bg-white", "bg-opacity-50", "hover:bg-opacity-75");
+                    }
+                    button.addEventListener("click", () => {
+                        currentIndex = index;
+                        updateCarousel();
+                        resetInterval();
+                    });
+                    indicatorsContainer.appendChild(button);
+                });
+            }
+            function showNext() {
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                updateCarousel();
+            }
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+                updateCarousel();
+            }
+            function startInterval() {
+                intervalId = setInterval(showNext, 5000); // Change slide every 5 seconds
+            }
+            function resetInterval() {
+                clearInterval(intervalId);
+                startInterval();
+            }
+            if (prevBtn && nextBtn && carouselItems.length > 0) {
+                prevBtn.addEventListener("click", () => {
+                    showPrev();
+                    resetInterval();
+                });
+                nextBtn.addEventListener("click", () => {
+                    showNext();
+                    resetInterval();
+                });
+                createIndicators();
+                updateCarousel(); // Initial display
+                startInterval(); // Start auto-slide
+            }
+            // Collapsible product section
+            const showMoreBtn = document.getElementById("showMoreBtn");
+            const moreProductsDiv = document.getElementById("moreProducts");
+            const expandIcon = document.getElementById("expandIcon");
+            if (showMoreBtn && moreProductsDiv && expandIcon) {
+                showMoreBtn.addEventListener("click", () => {
+                    const isExpanded = moreProductsDiv.classList.contains("max-h-screen");
+                    if (isExpanded) {
+                        moreProductsDiv.classList.remove("max-h-screen");
+                        moreProductsDiv.classList.add("max-h-0");
+                        expandIcon.classList.remove("rotate-180");
+                        showMoreBtn.firstChild.textContent = "Show More Products ";
+                    } else {
+                        moreProductsDiv.classList.remove("max-h-0");
+                        moreProductsDiv.classList.add("max-h-screen");
+                        expandIcon.classList.add("rotate-180");
+                        showMoreBtn.firstChild.textContent = "Show Less Products ";
+                    }
+                });
+            }
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
