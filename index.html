@@ -131,7 +131,7 @@
                 </div>
             </section>
             <section class="mb-16" id="products">
-                <div class="bg-sky-50 p-8 md:p-12 rounded-xl shadow-xl border border-sky-200">
+                <div class="bg-sky-50 p-8 md:p-12 rounded-xl shadow-xl border border-sky-200"><div id="inventory-container" class="product-grid">
                     <h2 class="text-3xl md:text-4xl font-bold text-keywest-darkblue playfair-display mb-10 text-center">
                         Our Featured Products
                     </h2>
@@ -380,6 +380,7 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
             <section class="mb-16" id="about">
                 <div
@@ -590,10 +591,6 @@
                     }
                 });
             });
-        </script>
-        <div id="inventory-container" class="product-grid"></div>
-
-<script>
   const container = document.getElementById('inventory-container');
 
   fetch('https://script.google.com/macros/s/your-script-id/exec?action=getInventory')
