@@ -6,7 +6,7 @@
         <title>Southernmost Aesthetics</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
             rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <style>
@@ -59,15 +59,13 @@
                 transform: rotate(180deg);
             }
             /* Optional: smoother scaling and shadows for product cards */
-.product-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
-
+            .product-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .product-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+            }
         </style>
     </head>
     <body class="bg-slate-50">
@@ -140,133 +138,23 @@
                         id="indicators"></div>
                 </div>
             </section>
+
             <section class="mb-16" id="products">
-                <div class="bg-sky-50 p-8 md:p-12 rounded-xl shadow-xl border border-sky-200"><div id="inventory-container" class="product-grid">
+                <div class="bg-sky-50 p-8 md:p-12 rounded-xl shadow-xl border border-sky-200">
                     <h2 class="text-3xl md:text-4xl font-bold text-keywest-darkblue playfair-display mb-10 text-center">
-                        Our Featured Products
+                        Our Jewelry Collection
                     </h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div
-                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
-                            <div class="relative">
-                                <img
-                                    alt="Artisanal Conch Shell Earrings"
-                                    class="w-full h-64 object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwWJkR0uG-W_10kM_Hq5j9E1Q0pBwO8kYx5l9I1iZf2fX_l_m-Y2e8nN9c0vS_C8a8rY6oWlP0bF3_P3jB-c_X_i_A2mRzY5mU5_tT_p_Y0nJ6_V1uX7_E1eG_jY6nZ9qX" />
-                                <div
-                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
-                                <div class="absolute bottom-0 left-0 p-4">
-                                    <span
-                                        class="text-xs bg-keywest-coral text-white font-semibold py-1 px-2 rounded-full uppercase tracking-wider"
-                                        >New Arrival</span
-                                    >
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
-                                    Conch Shell Earrings
-                                </h3>
-                                <p class="text-slate-600 text-sm mb-3">
-                                    Handcrafted sterling silver earrings featuring delicate conch shell charms.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <p class="text-2xl font-bold text-keywest-coral">$45.00</p>
-                                    <button
-                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
-                                        <svg
-                                            class="w-5 h-5 mr-1"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
-                                            <path
-                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
-                                        </svg>
-                                        Paypal Pay Link
-                                    </button>
-                                </div>
-                            </div>
+                    <div id="jewelry-items" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         </div>
-                        <div
-                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
-                            <div class="relative">
-                                <img
-                                    alt="Key Lime Scented Candle"
-                                    class="w-full h-64 object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4mG0tD8eE9kF9lJ1zF_jI_kO7pQ-V5sR2xN2uJ6pL_aW_uG-jY0wM1nB_i_P7a_Q_rX9zL_kF_oW_xR_eJ_qZ_bH_uK_aO_gU_tP_jE_nK_lX_oT_sY7_C_rP_wN_qU" />
-                                <div
-                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
-                                    Key Lime Breeze Candle
-                                </h3>
-                                <p class="text-slate-600 text-sm mb-3">
-                                    Soy wax candle with the refreshing scent of Key West key limes.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <p class="text-2xl font-bold text-keywest-coral">$28.00</p>
-                                    <button
-                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
-                                        <svg
-                                            class="w-5 h-5 mr-1"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
-                                            <path
-                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
-                                        </svg>
-                                        Paypal Pay Link
-                                    </button>
-                                </div>
-                            </div>
+
+                    <div class="my-16 border-t border-sky-200"></div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-keywest-darkblue playfair-display mb-10 text-center">
+                        Our Furniture & Home Decor
+                    </h2>
+                    <div id="furniture-items" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         </div>
-                        <div
-                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
-                            <div class="relative">
-                                <img
-                                    alt="Sunset Over Mallory Square Print"
-                                    class="w-full h-64 object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVg_oN_X_P_R_T_Y_U_K_M_J_A_F_E_D_C_B_A_zX_yW_vU_tS_rQ_p_O_n_M_l_K_j_I_h_G_f_E_d_C_b_A_zY_xW_v_U_tS_r_Q_p_O_n_M_l_K_j_I_h_G_f_E_d_C_b_A" />
-                                <div
-                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
-                                <div class="absolute top-0 right-0 m-3">
-                                    <span
-                                        class="text-xs bg-keywest-yellow text-keywest-darkblue font-semibold py-1 px-2 rounded-full uppercase tracking-wider"
-                                        >Best Seller</span
-                                    >
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
-                                    Mallory Square Sunset Print
-                                </h3>
-                                <p class="text-slate-600 text-sm mb-3">
-                                    Vibrant art print capturing the iconic Key West sunset celebration.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <p class="text-2xl font-bold text-keywest-coral">$55.00</p>
-                                    <button
-                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
-                                        <svg
-                                            class="w-5 h-5 mr-1"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
-                                            <path
-                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
-                                        </svg>
-                                        Paypal Pay Link
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="text-center mt-12">
                         <button
                             class="bg-keywest-blue hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg inline-flex items-center"
@@ -280,116 +168,7 @@
                     <div
                         class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-h-0 overflow-hidden transition-max-height duration-700 ease-in-out"
                         id="moreProducts">
-                        <div
-                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
-                            <div class="relative">
-                                <img
-                                    alt="Tropical Print Scarf"
-                                    class="w-full h-64 object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZuB-k2Lw2g-09wHq7M8c_0_x_z_Y_X_W_V_U_T_S_R_Q_P_O_N_M_L_K_J_I_H_G_F_E_D_C_B_A_0_1_2_3_4_5_6_7_8_9" />
-                                <div
-                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
-                                    Tropical Paradise Scarf
-                                </h3>
-                                <p class="text-slate-600 text-sm mb-3">
-                                    Lightweight scarf with vibrant Key West floral patterns.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <p class="text-2xl font-bold text-keywest-coral">$32.00</p>
-                                    <button
-                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
-                                        <svg
-                                            class="w-5 h-5 mr-1"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
-                                            <path
-                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
-                                        </svg>
-                                        Paypal Pay Link
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
-                            <div class="relative">
-                                <img
-                                    alt="Driftwood Picture Frame"
-                                    class="w-full h-64 object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiL-9b5Z7c_G_k_N_l_M_o_P_q_R_s_T_u_V_w_X_y_Z_a_B_c_D_e_F_g_H_i_J_k_L_m_N_o_P_q_R_s_T_u_V_w_X_y_Z_a_B_c_D_e_F_g_H_i_J_k_L_m_N" />
-                                <div
-                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
-                                    Coastal Driftwood Frame
-                                </h3>
-                                <p class="text-slate-600 text-sm mb-3">
-                                    Rustic picture frame made from reclaimed Key West driftwood.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <p class="text-2xl font-bold text-keywest-coral">$38.00</p>
-                                    <button
-                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
-                                        <svg
-                                            class="w-5 h-5 mr-1"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
-                                            <path
-                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
-                                        </svg>
-                                        Paypal Pay Link
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
-                            <div class="relative">
-                                <img
-                                    alt="Seaglass Wind Chime"
-                                    class="w-full h-64 object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEu2F3H4G5I6J7K8L9M0N1O2P3Q4R5S6T7U8V9W0X_Y_Z_A_B_C_D_E_F_G_H_I_J_K_L_M_N_O_P_Q_R_S_T_U_V_W_X_Y_Z_a_b_c_d_e_f" />
-                                <div
-                                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">
-                                    Ocean Whisper Wind Chime
-                                </h3>
-                                <p class="text-slate-600 text-sm mb-3">
-                                    Handmade wind chime with colorful Key West seaglass pieces.
-                                </p>
-                                <div class="flex justify-between items-center">
-                                    <p class="text-2xl font-bold text-keywest-coral">$42.00</p>
-                                    <button
-                                        class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
-                                        <svg
-                                            class="w-5 h-5 mr-1"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
-                                            <path
-                                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
-                                        </svg>
-                                        Paypal Pay Link
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
                 </div>
             </section>
             <section class="mb-16" id="about">
@@ -440,7 +219,7 @@
                         <svg aria-hidden="true" class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 clip-rule="evenodd"
-                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.028 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zm0 1.623c-2.387 0-2.71.01-3.66.056a3.267 3.267 0 00-1.89.693 3.267 3.267 0 00-.693 1.89c-.046.95-.056 1.273-.056 3.66s.01 2.71.056 3.66c.046.715.246 1.305.693 1.89a3.267 3.267 0 001.89.693c.95.046 1.273.056 3.66.056s2.71-.01 3.66-.056a3.267 3.267 0 001.89-.693 3.267 3.267 0 00.693-1.89c.046-.95.056-1.273.056-3.66s-.01-2.71-.056-3.66a3.267 3.267 0 00-.693-1.89 3.267 3.267 0 00-1.89-.693c-.95-.046-1.273-.056-3.66-.056zM12 6.838a5.162 5.162 0 100 10.324 5.162 5.162 0 000-10.324zM12 15a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.71.056-3.66a3.267 3.267 0 00-.693-1.89 3.267 3.267 0 00-1.89-.693c-.95-.046-1.273-.056-3.66-.056zM12 6.838a5.162 5.162 0 100 10.324 5.162 5.162 0 000-10.324zM12 15a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"
                                 fill-rule="evenodd"></path>
                         </svg>
                         <span class="sr-only">Instagram</span>
@@ -601,76 +380,109 @@
                     }
                 });
             });
-const inventoryContainer = document.getElementById('inventory-container');
 
+            // JavaScript for fetching and displaying products from Google Sheet
+            // Replace with your actual published Google Sheet CSV URL
+            const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQiLIHSrVZlaooerV_DfprQZVroExIl0bhPh3Xq2yOz94kOI2DMNHEeODS29JFJ-hjs80taS_RkVbD3Ck/pub?output=csv';
 
-  fetch('https://script.google.com/macros/s/AKfycbzMljC_C9ZmUODjXXWT8tCaujWBmbiTzDwD6hhu1HGH-IEC8SwYBTCCB-e_Rv_BWD9a/exec?action=getInventory')
-    .then(response => response.json())
-    .then(items => {
-      const availableItems = items.filter(item => item.status === 'Available');
-      if (availableItems.length === 0) {
-         inventoryContainer.innerHTML = '<p>No items currently available.</p>';
-        return;
-      }
+            async function fetchAndDisplayProducts() {
+                try {
+                    const response = await fetch(GOOGLE_SHEET_CSV_URL);
+                    const csvData = await response.text();
 
-      container.innerHTML = availableItems.map(item => `
-        <div class="product-card bg-keywest-sand border-keywest-sand">
-          <img src="${item.imageUrl || 'https://via.placeholder.com/150'}" alt="${item.name}" class="product-image" />
-          <h3 class="playfair-display">${item.name}</h3>
-          <p>${item.description}</p>
-          <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
-          <p><strong>Category:</strong> ${item.category}</p>
-        </div>
-      `).join('');
-    })
-    .catch(err => {
-       inventoryContainer.innerHTML = '<p>Failed to load inventory. Please try again later.</p>';
-      console.error('Inventory load error:', err);
-    });
+                    // Parse CSV data
+                    const products = parseCSV(csvData);
 
-fetch('https://script.google.com/macros/s/AKfycbzMljC_C9ZmUODjXXWT8tCaujWBmbiTzDwD6hhu1HGH-IEC8SwYBTCCB-e_Rv_BWD9a/exec?action=getInventory')
-  .then(response => response.json())
-  .then(items => {
-    const availableItems = items.filter(item => item.status === 'Available');
-    if (availableItems.length === 0) {
-       inventoryContainer.innerHTML = '<p class="text-center text-gray-500 italic">No items currently available.</p>';
-      return;
-    }
+                    // Get the containers for jewelry and furniture
+                    const jewelryContainer = document.getElementById('jewelry-items');
+                    const furnitureContainer = document.getElementById('furniture-items');
 
-     inventoryContainer.innerHTML = availableItems.map(item => `
-      <div
-        class="bg-keywest-sand border border-keywest-sand rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-      >
-        <img
-          src="${item.imageUrl || 'https://via.placeholder.com/400x300?text=No+Image'}"
-          alt="${item.name}"
-          class="w-full h-64 object-cover rounded-t-xl"
-          loading="lazy"
-        />
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold text-keywest-darkblue playfair-display mb-2">${item.name}</h3>
-          <p class="text-gray-700 mb-4">${item.description || ''}</p>
-          <p class="text-keywest-coral font-bold text-xl mb-1">$${item.price.toFixed(2)}</p>
-          <p class="text-sm text-keywest-blue uppercase tracking-wide mb-4">${item.category}</p>
-          ${item.paypalLink ? `
-            <a href="${item.paypalLink}" target="_blank" rel="noopener" 
-               class="inline-flex items-center bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm">
-               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"/>
-                 <path d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"/>
-               </svg>
-               Buy Now
-            </a>
-          ` : ''}
-        </div>
-      </div>
-    `).join('');
-  })
-  .catch(err => {
-     inventoryContainer.innerHTML = '<p class="text-center text-red-500 font-semibold">Failed to load inventory. Please try again later.</p>';
-    console.error('Inventory load error:', err);
-  });
+                    jewelryContainer.innerHTML = ''; // Clear previous content
+                    furnitureContainer.innerHTML = ''; // Clear previous content
 
-</script>
+                    products.forEach(product => {
+                        const productCard = createProductCard(product);
+                        // Ensure the 'Category' column exists and matches case in your sheet
+                        if (product.Category && product.Category.toLowerCase() === 'jewelry') {
+                            jewelryContainer.appendChild(productCard);
+                        } else if (product.Category && product.Category.toLowerCase() === 'furniture') {
+                            furnitureContainer.appendChild(productCard);
+                        }
+                        // You can add a default category or handle other categories as needed
+                    });
+
+                } catch (error) {
+                    console.error('Error fetching or displaying products:', error);
+                    // You might want to display a user-friendly error message on the website
+                    document.getElementById('jewelry-items').innerHTML = '<p>Error loading jewelry items. Please try again later.</p>';
+                    document.getElementById('furniture-items').innerHTML = '<p>Error loading furniture items. Please try again later.</p>';
+                }
+            }
+
+            function parseCSV(csvText) {
+                const lines = csvText.trim().split('\n');
+                // Ensure headers are trimmed and correctly read
+                const headers = lines[0].split(',').map(header => header.trim());
+                const products = [];
+
+                for (let i = 1; i < lines.length; i++) {
+                    const values = lines[i].split(',');
+                    const product = {};
+                    headers.forEach((header, index) => {
+                        product[header] = values[index] ? values[index].trim() : ''; // Trim values and handle undefined
+                    });
+                    products.push(product);
+                }
+                return products;
+            }
+
+            function createProductCard(product) {
+                const card = document.createElement('div');
+                card.classList.add('product-card', 'bg-white', 'rounded-lg', 'shadow-lg', 'overflow-hidden', 'transition-transform', 'duration-300', 'hover:scale-105', 'group'); // Add Tailwind classes for styling
+
+                // Access properties using your exact header names: 'Name', 'Description', 'Price', 'Image URL', 'Paylink URL'
+                const itemName = product['Name'] || 'No Name';
+                const description = product['Description'] || 'No description available.';
+                const price = product['Price'] ? `$${parseFloat(product['Price']).toFixed(2)}` : 'Price not listed';
+                const imageUrl = product['Image URL'] || 'placeholder.jpg'; // Using your 'Image URL' header
+                const paylinkUrl = product['Paylink URL'] || ''; // Get the paylink URL
+
+                // Conditionally render the PayPal button if a Paylink URL exists
+                const payButtonHtml = paylinkUrl ? `
+                    <a href="${paylinkUrl}" target="_blank" class="bg-paypal-blue hover:bg-paypal-darkblue text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-sm flex items-center">
+                        <svg
+                            class="w-5 h-5 mr-1"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.064 2.956L4.056 15.18h3.08l.476-2.376h2.753c2.45 0 4.062-.85 4.552-3.015.39-1.74-.75-2.65-1.992-3.09-.73-.27-1.61-.42-2.6-.42H7.064zM12.92 5.484c.44.17.7.45.82.81.23.69-.02 1.12-.58 1.12H9.98l.53-2.63h1.83c.23 0 .42.01.58.07zM6.55 12.804h3.033l.476-2.376h-3.03l-.478 2.375z"></path>
+                            <path
+                                d="M7.756 15.18l-.925 4.616h2.376L10.128 15.18H7.756zM13.15 15.18l-.39 1.933c-.08.4-.23.74-.45.99-.23.27-.52.4-.9.4h-1.7l2.09-10.41h2.02c1.42 0 2.29.24 2.79.9.38.5.44 1.12.29 1.93-.14.73-.5 1.3-1.02 1.68-.45.34-.99.53-1.68.53h-1.1l.42-2.09h.9c.73 0 1.18-.19 1.37-.63.2-.42.12-.84-.15-1.12-.2-.2-.47-.29-.78-.29H12.2l-1.12 5.58h1.6c.52 0 .87-.07 1.08-.29.22-.2.3-.5.29-.8zm-5.057.55h3.03l.477-2.376h-3.03L8.092 15.73z"></path>
+                        </svg>
+                        Paypal Pay Link
+                    </a>
+                ` : ''; // Empty string if no paylink URL
+
+                card.innerHTML = `
+                    <div class="relative">
+                        <img src="${imageUrl}" alt="${itemName}" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"></div>
+                        </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-keywest-darkblue playfair-display mb-2">${itemName}</h3>
+                        <p class="text-slate-600 text-sm mb-3">${description}</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-2xl font-bold text-keywest-coral">${price}</p>
+                            ${payButtonHtml}
+                        </div>
+                    </div>
+                `;
+                return card;
+            }
+
+            // Call the function when the page loads
+            document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
+        </script>
     </body>
 </html>
