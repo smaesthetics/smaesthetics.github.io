@@ -627,7 +627,6 @@ const inventoryContainer = document.getElementById('inventory-container');
        inventoryContainer.innerHTML = '<p>Failed to load inventory. Please try again later.</p>';
       console.error('Inventory load error:', err);
     });
-            const inventoryContainer = document.getElementById('inventory- inventoryContainer');
 
 fetch('https://script.google.com/macros/s/your-real-script-id/exec?action=getInventory')
   .then(response => response.json())
