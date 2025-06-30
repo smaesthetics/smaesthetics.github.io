@@ -628,7 +628,7 @@ const inventoryContainer = document.getElementById('inventory-container');
       console.error('Inventory load error:', err);
     });
 
-fetch('https://script.google.com/macros/s/your-real-script-id/exec?action=getInventory')
+fetch('https://script.google.com/macros/s/AKfycbzMljC_C9ZmUODjXXWT8tCaujWBmbiTzDwD6hhu1HGH-IEC8SwYBTCCB-e_Rv_BWD9a/exec?action=getInventory')
   .then(response => response.json())
   .then(items => {
     const availableItems = items.filter(item => item.status === 'Available');
