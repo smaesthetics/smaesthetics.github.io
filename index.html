@@ -591,5 +591,34 @@
                 });
             });
         </script>
+        <div id="inventory-container" class="product-grid"></div>
+
+<script>
+  const container = document.getElementById('inventory-container');
+
+  fetch('https://script.google.com/macros/s/your-script-id/exec?action=getInventory')
+    .then(response => response.json())
+    .then(items => {
+      const availableItems = items.filter(item => item.status === 'Available');
+      if (availableItems.length === 0) {
+        container.innerHTML = '<p>No items currently available.</p>';
+        return;
+      }
+
+      container.innerHTML = availableItems.map(item => `
+        <div class="product-card bg-keywest-sand border-keywest-sand">
+          <img src="${item.imageUrl || 'https://via.placeholder.com/150'}" alt="${item.name}" class="product-image" />
+          <h3 class="playfair-display">${item.name}</h3>
+          <p>${item.description}</p>
+          <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
+          <p><strong>Category:</strong> ${item.category}</p>
+        </div>
+      `).join('');
+    })
+    .catch(err => {
+      container.innerHTML = '<p>Failed to load inventory. Please try again later.</p>';
+      console.error('Inventory load error:', err);
+    });
+</script>
     </body>
 </html>
